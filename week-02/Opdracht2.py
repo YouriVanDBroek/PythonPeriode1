@@ -11,7 +11,8 @@
 #   Print dan: "Je bent nog geen 18."
 #
 # Test je programma daarna met verschillende waardes voor age.
-
+age = 16
+ print("Je bent nog geen 18.")
 
 
 # Opdracht 2 - Voldoende of onvoldoende
@@ -28,6 +29,10 @@
 #   Print: "Je hebt een onvoldoende."
 #
 # Test je programma met verschillende cijfers.
+cijfer = 7
+
+ 
+    print("Je hebt een voldoende!")
 
 
 
@@ -50,6 +55,11 @@
 # 4
 # 6
 # 9
+grade = 7
+
+
+
+    print("Voldoende!")
 
 
 
@@ -72,7 +82,15 @@
 #
 # Als dit zo is:
 # Print "Je hebt een schild!"
+health = 75
+has_shield = True
 
+
+    print("Je hebt genoeg health.")
+
+
+
+    print("Je hebt een schild!")
 
 
 # Opdracht 5 - Mag je naar binnen?
@@ -96,6 +114,12 @@
 # Print "Je mag niet naar binnen."
 #
 # Test daarna wat er gebeurt als je de waardes verandert.
+age = 20
+has_ticket = True
+
+
+    print("Je mag naar binnen!")
+
 
 
 
@@ -113,7 +137,8 @@
 # 10
 #
 # Gebruik hiervoor range().
-
+for number in range(1, 11):
+    print(number)
 
 
 # Opdracht 7 - Tafel van 5
@@ -130,7 +155,9 @@
 #
 # Gebruik de variabele uit je for-loop
 # om de berekening te maken.
-
+for number in range(1, 11):
+    result = number * 5
+    print(number, "x 5 =", result)
 
 
 # Opdracht 8 - Countdown
@@ -157,7 +184,13 @@
 # 2
 # 1
 # GO!
+countdown = 10
 
+while countdown > 0:
+    print(countdown)
+    countdown = countdown - 1
+
+print("GO!")
 
 
 # Opdracht 9 - Health verliezen
@@ -179,6 +212,11 @@
 # Health: 40
 # Health: 20
 # Health: 0
+health = 100
+
+for i in range(5):
+    health = health - 20
+    print("Health:", health)
 
 
 
@@ -203,6 +241,9 @@
 #
 # Bijvoorbeeld:
 # 4 % 2 == 0
+for number in range(1, 11):
+        print(number, "is even")
+    
 
 
 
@@ -228,7 +269,14 @@
 # Print "Vijand verslagen!"
 #
 # Daarna begint de volgende vijand.
+for enemy in range(5):
+    enemy_health = 30
 
+    while enemy_health > 0:
+        enemy_health = enemy_health - 10
+        print("Vijand health:", enemy_health)
+
+    print("Vijand verslagen!")
 
 
 # Eindopdracht - Player Training - BONUS
@@ -268,3 +316,20 @@
 # Voeg health en damage toe aan je speler.
 # Iedere keer dat de speler een level omhoog gaat,
 # krijgt hij 5 extra damage.
+player_name = "Steve"
+level = 1
+experience = 0
+
+for training in range(10):
+    experience = experience + 20
+
+    print(player_name, "heeft nu", experience, "experience.")
+
+    if experience >= 100:
+        level = level + 1
+        print("LEVEL UP!")
+        experience = 0
+
+print("Training voltooid!")
+print("Level:", level)
+print("Experience:", experience)
